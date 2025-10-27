@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servimpresiones – Productos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header>
+    <div class="nav-shell">
+      <nav class="nav">
+        <a class="brand" href="index.html#inicio">
+          <img class="logo" src="Imagenes/logo.png" alt="Servimpresiones" />
+          <span class="brand-text"><strong>Servimpresiones</strong><em>neiva</em></span>
+        </a>
+        <ul class="menu">
+          <li><a href="index.html#inicio">INICIO</a></li>
+          <li><a href="personaliza.html">PERSONALIZA</a></li>
+          <li><a class="active" href="productos.html">PRODUCTOS</a></li>
+          <li><a href="contacto.html">CONTACTANOS</a></li>
+          <li><a href="quienes.html">QUIENES SOMOS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero breve -->
+    <section class="section page-hero">
+      <div class="container">
+        <h1>Productos</h1>
+        <p class="subtitle">Elige y personaliza al instante.</p>
+      </div>
+    </section>
+
+    <!-- Catálogo -->
+    <section class="section catalogo">
+      <div class="container">
+        <div class="grid">
+          <!-- T-Shirt -->
+          <article class="product card">
+            <a class="thumb" href="personaliza.html?product=tshirt" aria-label="Personalizar T-Shirt">
+              <img src="assets/img/thumbs/tshirt.png" alt="T-Shirt" loading="lazy">
+            </a>
+            <div class="meta">
+              <h3>T-Shirt</h3>
+              <span class="price">$432.000</span>
+            </div>
+            <div class="subtitle">Algodón premium, ideal para estampado frontal.</div>
+            <a class="btn-outline" href="personaliza.html?product=tshirt">Personaliza</a>
+          </article>
+
+          <!-- Hoodie -->
+          <article class="product card">
+            <a class="thumb" href="personaliza.html?product=hoodie" aria-label="Personalizar Hoodie">
+              <img src="assets/img/thumbs/hoodie.png" alt="Hoodie" loading="lazy">
+            </a>
+            <div class="meta">
+              <h3>Hoodie</h3>
+              <span class="price">$432.000</span>
+            </div>
+            <div class="subtitle">Sudadera con capucha, suave y abrigada.</div>
+            <a class="btn-outline" href="personaliza.html?product=hoodie">Personaliza</a>
+          </article>
+
+          <!-- Termo -->
+          <article class="product card">
+            <a class="thumb" href="personaliza.html?product=termo" aria-label="Personalizar Termo">
+              <img src="assets/img/thumbs/termo.png" alt="Termo" loading="lazy">
+            </a>
+            <div class="meta">
+              <h3>Termo</h3>
+              <span class="price">$380.000</span>
+            </div>
+            <div class="subtitle">Personaliza con tu logo o nombre. Varios tamaños.</div>
+            <a class="btn-outline" href="personaliza.html?product=termo">Personaliza</a>
+          </article>
+
+          <!-- Libreta -->
+          <article class="product card">
+            <a class="thumb" href="personaliza.html?product=libreta" aria-label="Personalizar Libreta">
+              <img src="assets/img/thumbs/libreta.png" alt="Libreta" loading="lazy">
+            </a>
+            <div class="meta">
+              <h3>Libreta</h3>
+              <span class="price">$280.000</span>
+            </div>
+            <div class="subtitle">Portada personalizada. A6, A5 o A4.</div>
+            <a class="btn-outline" href="personaliza.html?product=libreta">Personaliza</a>
+          </article>
+
+          <!-- Pin -->
+          <article class="product card">
+            <a class="thumb" href="personaliza.html?product=pin" aria-label="Personalizar Pin">
+              <img src="assets/img/thumbs/pin.png" alt="Pin" loading="lazy">
+            </a>
+            <div class="meta">
+              <h3>Pin</h3>
+              <span class="price">$120.000</span>
+            </div>
+            <div class="subtitle">Varios tamaños, mate o brillante, imperdible o imán.</div>
+            <a class="btn-outline" href="personaliza.html?product=pin">Personaliza</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section">
+    <div class="container copy">© <span id="year"></span> Servimpresiones. Todos los derechos reservados.</div>
+  </footer>
+
+  <script>
+    // Año del footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

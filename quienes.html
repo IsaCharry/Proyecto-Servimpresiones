@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiénes Somos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+    <!-- Favicon para navegadores -->
+<link rel="icon" type="image/png" sizes="32x32" href="Imagenes/icon1.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Imagenes/icon1.png">
+<!-- iOS / iPadOS -->
+<link rel="apple-touch-icon" sizes="180x180" href="Imagenes/icon1.png">
+<!-- Alternativa si tienes un .ico -->
+<!-- <link rel="icon" href="Imagenes/favicon.ico"> -->
+</head>
+<body>
+<header>
+  <div class="nav-shell">
+    <nav class="nav">
+      <a class="brand" href="index.html#inicio"><img src="assets/img/logo-servimpresiones.png" alt="Servimpresiones"></a>
+      <ul class="menu">
+        <li><a href="index.html#inicio">INICIO</a></li>
+        <li><a href="personaliza.html">PERSONALIZA</a></li>
+        <li><a href="productos.html">PRODUCTOS</a></li>
+        <li><a href="contacto.html">CONTACTANOS</a></li>
+        <li><a class="active" href="#">QUIENES SOMOS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="pagehead">
+  <div class="container">
+    <div class="crumbs"><a href="index.html#inicio">← Volver al inicio</a></div>
+    <h1>¿Quiénes somos?</h1>
+    <p class="subtitle">Personalizamos productos que potencian tu identidad.</p>
+  </div>
+</div>
+
+<main class="section">
+  <div class="container" style="display:grid;grid-template-columns:1.1fr 1fr;gap:18px">
+    <section class="card">
+      <h2>Nuestra historia</h2>
+      <p>Desde Neiva, trabajamos con emprendedores, empresas y equipos para crear productos memorables: camisetas, mugs, termos, pines y más.</p>
+      <div style="display:grid;gap:10px;margin-top:14px">
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:12px"><div class="subtitle">2019</div><div class="card" style="padding:12px">Proyecto familiar de impresión.</div></div>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:12px"><div class="subtitle">2021</div><div class="card" style="padding:12px">Ampliamos catálogo a textiles y souvenirs.</div></div>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:12px"><div class="subtitle">2024</div><div class="card" style="padding:12px">Lanzamos plataforma online de pedidos.</div></div>
+      </div>
+    </section>
+
+    <aside class="card">
+      <h2>Lo que nos mueve</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px">
+        <div class="card" style="text-align:center"><strong style="font-size:1.4rem">+500</strong><br>Pedidos entregados</div>
+        <div class="card" style="text-align:center"><strong style="font-size:1.4rem">1–25d</strong><br>Entrega estimada</div>
+        <div class="card" style="text-align:center"><strong style="font-size:1.4rem">4.8★</strong><br>Satisfacción</div>
+      </div>
+
+      <h3 style="margin-top:16px">Nuestro equipo</h3>
+      <div class="team-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:14px">
+        <article class="member card" style="text-align:center">
+          <div class="avatar" style="width:110px;height:110px;border-radius:50%;margin:0 auto 8px;overflow:hidden;border:4px solid #0b121a;background:#0b121a;box-shadow:0 6px 18px rgba(0,0,0,.22)">
+            <img src="assets/img/team/andrea.jpg" alt="Andrea" style="width:100%;height:100%;object-fit:cover">
+          </div>
+          <h3>Andrea Torres</h3><p class="subtitle" style="font-size:.95rem">Dirección & Atención</p>
+        </article>
+        <article class="member card" style="text-align:center">
+          <div class="avatar" style="width:110px;height:110px;border-radius:50%;margin:0 auto 8px;overflow:hidden;border:4px solid #0b121a;background:#0b121a;box-shadow:0 6px 18px rgba(0,0,0,.22)">
+            <img src="assets/img/team/camilo.jpg" alt="Camilo" style="width:100%;height:100%;object-fit:cover">
+          </div>
+          <h3>Camilo Rojas</h3><p class="subtitle" style="font-size:.95rem">Producción & Textil</p>
+        </article>
+        <article class="member card" style="text-align:center">
+          <div class="avatar" style="width:110px;height:110px;border-radius:50%;margin:0 auto 8px;overflow:hidden;border:4px solid #0b121a;background:#0b121a;box-shadow:0 6px 18px rgba(0,0,0,.22)">
+            <img src="assets/img/team/sofia.jpg" alt="Sofía" style="width:100%;height:100%;object-fit:cover">
+          </div>
+          <h3>Sofía López</h3><p class="subtitle" style="font-size:.95rem">Diseño & Preprensa</p>
+        </article>
+        <article class="member card" style="text-align:center">
+          <div class="avatar" style="width:110px;height:110px;border-radius:50%;margin:0 auto 8px;overflow:hidden;border:4px solid #0b121a;background:#0b121a;box-shadow:0 6px 18px rgba(0,0,0,.22)">
+            <img src="assets/img/team/pedro.jpg" alt="Pedro" style="width:100%;height:100%;object-fit:cover">
+          </div>
+          <h3>Pedro Fernández</h3><p class="subtitle" style="font-size:.95rem">Logística & Calidad</p>
+        </article>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="footer" style="padding:22px 0">
+  <div class="container">© <span id="year"></span> Servimpresiones. Todos los derechos reservados.</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

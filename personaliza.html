@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servimpresiones – Personaliza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header>
+    <div class="nav-shell">
+      <nav class="nav">
+        <a class="brand" href="index.html#inicio">
+          <img class="logo" src="Imagenes/logo.png" alt="Servimpresiones" />
+          <span class="brand-text"><strong>Servimpresiones</strong><em>neiva</em></span>
+        </a>
+        <ul class="menu">
+          <li><a href="index.html#inicio">INICIO</a></li>
+          <li><a class="active" href="personaliza.html">PERSONALIZA</a></li>
+          <li><a href="productos.html">PRODUCTOS</a></li>
+          <li><a href="contacto.html">CONTACTANOS</a></li>
+          <li><a href="quienes.html">QUIENES SOMOS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- LIENZO DE PERSONALIZACIÓN -->
+    <section class="section customiz">
+      <div class="container customiz-wrap">
+
+        <!-- Barra lateral -->
+        <aside class="customiz-side">
+          <h2 class="side-title">Customizar</h2>
+
+          <!-- Tallas (se oculta automáticamente si el producto no es de ropa) -->
+          <div class="chip-row" id="sizeRow" aria-label="Tallas">
+            <button class="chip selected" data-size="S">S</button>
+            <button class="chip" data-size="M">M</button>
+            <button class="chip" data-size="L">L</button>
+            <button class="chip" data-size="XL">XL</button>
+            <button class="chip" data-size="XXL">XXL</button>
+          </div>
+
+          <!-- Opciones dinámicas por tipo de producto (JS las inserta aquí) -->
+          <div id="dynOptions"></div>
+
+          <!-- Color -->
+          <div class="opt-box">
+            <div class="opt-title">Color</div>
+            <div class="swatches" id="colorRow">
+              <label class="sw"><input type="radio" name="color" value="#1e1e1e"><span style="--c:#1e1e1e"></span></label>
+              <label class="sw"><input type="radio" name="color" value="#0e7490"><span style="--c:#0e7490"></span></label>
+              <label class="sw"><input type="radio" name="color" value="#166534"><span style="--c:#166534"></span></label>
+              <label class="sw"><input type="radio" name="color" value="#991b1b"><span style="--c:#991b1b"></span></label>
+              <label class="sw"><input type="radio" name="color" value="#1f2937" checked><span style="--c:#1f2937"></span></label>
+              <label class="sw"><input type="radio" name="color" value="#ffffff"><span style="--c:#ffffff;border-color:#cbd5e1"></span></label>
+            </div>
+          </div>
+
+          <!-- Estampado (imagen) -->
+          <div class="opt-box">
+            <div class="opt-title">Estampado (imagen)</div>
+            <input type="file" id="uploadImg" accept="image/*" class="input" />
+            <label class="range-row">Tamaño
+              <input type="range" id="imgScale" min="30" max="130" value="70">
+            </label>
+          </div>
+
+          <!-- Texto -->
+          <div class="opt-box">
+            <div class="opt-title">Texto</div>
+            <input class="input" id="txtText" type="text" placeholder="Tu frase o nombre" />
+            <div class="grid2">
+              <label>Tamaño
+                <input type="range" id="txtSize" min="12" max="64" value="28">
+              </label>
+              <label>Color
+                <input type="color" id="txtColor" value="#ffffff">
+              </label>
+            </div>
+          </div>
+
+          <!-- Cantidad / Precio -->
+          <div class="opt-box">
+            <div class="opt-title">Cantidad y precio</div>
+            <div class="grid2">
+              <label>Cantidad
+                <input class="input" id="qty" type="number" min="1" value="1">
+              </label>
+              <label>Precio (COP)
+                <input class="input" id="price" type="text" readonly>
+              </label>
+            </div>
+            <small class="muted">Envío e impuestos se calculan al pagar.</small>
+          </div>
+
+          <div class="opt-actions">
+            <button id="btnAddCart" class="btn-primary">Añadir al carrito</button>
+            <a href="productos.html" class="btn-outline">Volver a productos</a>
+          </div>
+        </aside>
+
+        <!-- Lienzo del producto -->
+        <section class="customiz-canvas" aria-label="Vista previa">
+          <div class="canvas-board">
+            <!-- Producto principal -->
+            <div class="mock" id="mockMain">
+              <img id="imgBase" alt="Producto" />
+              <div class="tint" id="tint"></div>
+              <img id="imgStamp" class="floating" alt="" />
+              <div id="txtStamp" class="floating text-stamp"></div>
+            </div>
+            <!-- Producto secundario (espalda/miniatura) -->
+            <div class="mock mock--mini">
+              <img id="imgBack" alt="Producto reverso" />
+            </div>
+          </div>
+          <div class="canvas-caption">
+            <div id="prodName" class="h3">Producto</div>
+            <div class="muted" id="prodInfo">Personaliza a tu gusto.</div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section">
+    <div class="container copy">© <span id="year"></span> Servimpresiones. Todos los derechos reservados.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

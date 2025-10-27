@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servimpresiones – Galería</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="nav-shell">
+      <nav class="nav">
+        <a class="brand" href="index.html#inicio">
+          <img class="logo" src="Imagenes/logo.png" alt="Servimpresiones" />
+          <span class="brand-text"><strong>Servimpresiones</strong><em>neiva</em></span>
+        </a>
+        <ul class="menu">
+          <li><a href="index.html#inicio">INICIO</a></li>
+          <li><a class="active" href="personaliza.html">PERSONALIZA</a></li>
+          <li><a href="productos.html">PRODUCTOS</a></li>
+          <li><a href="contacto.html">CONTACTANOS</a></li>
+          <li><a href="quienes.html">QUIENES SOMOS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <a class="back-link" href="index.html#inspirate">← Volver a INSPÍRATE</a>
+        <h1 class="h2">Galería</h1>
+        <p class="subtitle">Explora ejemplos reales.</p>
+
+        <!-- Tabs -->
+        <div class="gal-tabs">
+          <button class="gal-tab active" data-target="tshirts">T-Shirts</button>
+          <button class="gal-tab" data-target="mugs">Mugs · Termos</button>
+          <button class="gal-tab" data-target="hoodies">Hoodies y Accesorios</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section galeria">
+      <div class="container">
+
+        <!-- T-Shirts -->
+        <section id="tshirts" class="gal-section">
+          <h3 class="gal-title">T-Shirts</h3>
+          <div class="car car--large" data-car>
+            <button class="car-btn prev" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+
+            <div class="car-viewport">
+              <div class="car-track">
+                <img class="car-item" src="assets/img/gallery/t1.jpg" alt="T-Shirt 1">
+                <img class="car-item" src="assets/img/gallery/t2.jpg" alt="T-Shirt 2">
+                <img class="car-item" src="assets/img/gallery/t3.jpg" alt="T-Shirt 3">
+                <img class="car-item" src="assets/img/gallery/t4.jpg" alt="T-Shirt 4">
+                <img class="car-item" src="assets/img/gallery/t5.jpg" alt="T-Shirt 5">
+                <img class="car-item" src="assets/img/gallery/t6.jpg" alt="T-Shirt 6">
+              </div>
+            </div>
+
+            <button class="car-btn next" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <div class="car-dots"></div>
+          </div>
+        </section>
+
+        <!-- Mugs -->
+        <section id="mugs" class="gal-section" hidden>
+          <h3 class="gal-title">Mugs · Termos</h3>
+          <div class="car car--large" data-car>
+            <button class="car-btn prev" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+
+            <div class="car-viewport">
+              <div class="car-track">
+                <img class="car-item" src="assets/img/gallery/m1.jpg" alt="Mug 1">
+                <img class="car-item" src="assets/img/gallery/m2.jpg" alt="Mug 2">
+                <img class="car-item" src="assets/img/gallery/m3.jpg" alt="Mug 3">
+                <img class="car-item" src="assets/img/gallery/m4.jpg" alt="Mug 4">
+                <img class="car-item" src="assets/img/gallery/m5.jpg" alt="Mug 5">
+                <img class="car-item" src="assets/img/gallery/m6.jpg" alt="Mug 6">
+              </div>
+            </div>
+
+            <button class="car-btn next" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <div class="car-dots"></div>
+          </div>
+        </section>
+
+        <!-- Hoodies -->
+        <section id="hoodies" class="gal-section" hidden>
+          <h3 class="gal-title">Hoodies y Accesorios</h3>
+          <div class="car car--large" data-car>
+            <button class="car-btn prev" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+
+            <div class="car-viewport">
+              <div class="car-track">
+                <img class="car-item" src="assets/img/gallery/h1.jpg" alt="Hoodie 1">
+                <img class="car-item" src="assets/img/gallery/h2.jpg" alt="Hoodie 2">
+                <img class="car-item" src="assets/img/gallery/h3.jpg" alt="Hoodie 3">
+                <img class="car-item" src="assets/img/gallery/h4.jpg" alt="Hoodie 4">
+                <img class="car-item" src="assets/img/gallery/h5.jpg" alt="Hoodie 5">
+                <img class="car-item" src="assets/img/gallery/h6.jpg" alt="Hoodie 6">
+              </div>
+            </div>
+
+            <button class="car-btn next" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <div class="car-dots"></div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section">
+    <div class="container copy">© <span id="year"></span> Servimpresiones. Todos los derechos reservados.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
