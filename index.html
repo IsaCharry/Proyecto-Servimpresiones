@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviimpresiones Neiva - Personaliza tus productos</title>
+    <meta name="description" content="Tienda de productos personalizados en Neiva - Hoodies, camisetas, termos, libretas y más">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="contenedor">
+            <div class="header-contenido">
+                <div class="logo">
+                    <img src="imgs/logo.jpg" alt="Serviimpresiones Neiva" class="logo-img">
+                </div>
+                
+                <nav class="navegacion" id="navegacion">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="menu" id="menu">
+                        <li><a href="#inicio" class="menu-link activo" data-seccion="inicio">Inicio</a></li>
+                        <li><a href="#personaliza" class="menu-link" data-seccion="personaliza">Personaliza</a></li>
+                        <li><a href="#productos" class="menu-link" data-seccion="productos">Productos</a></li>
+                        <li><a href="#contactanos" class="menu-link" data-seccion="contactanos">Contáctanos</a></li>
+                        <li><a href="#quienes-somos" class="menu-link" data-seccion="quienes-somos">Quiénes Somos</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-iconos">
+                    <button class="icono-btn" id="btnCarrito" aria-label="Carrito de compras">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 2L8 7H21L20 18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18L3 7H5M9 2H15M9 2L8 7M15 2L16 7M8 7H16"/>
+                            <circle cx="9" cy="21" r="1"/>
+                            <circle cx="18" cy="21" r="1"/>
+                        </svg>
+                        <span class="contador-carrito" id="contadorCarrito">0</span>
+                    </button>
+                    <div class="usuario-container">
+                        <button class="icono-btn" id="btnUsuario" aria-label="Usuario">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </button>
+                        <div class="menu-usuario" id="menuUsuario">
+                            <div class="menu-usuario-header">
+                                <strong id="nombreUsuarioMenu">Usuario</strong>
+                            </div>
+                            <button class="menu-usuario-item" onclick="navegarA('mis-compras')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="8.5" cy="7" r="4"/>
+                                    <polyline points="17 11 19 13 23 9"/>
+                                </svg>
+                                Mis Compras
+                            </button>
+                            <button class="menu-usuario-item" id="btnCerrarSesion">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                                    <polyline points="16 17 21 12 16 7"/>
+                                    <line x1="21" y1="12" x2="9" y2="12"/>
+                                </svg>
+                                Cerrar Sesión
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main" id="contenidoPrincipal">
+        
+        <!-- Vista: Inicio -->
+        <section class="vista vista-activa" id="vista-inicio">
+            <div class="hero">
+                <div class="contenedor">
+                    <div class="hero-contenido">
+                        <h2 class="hero-titulo">Personaliza tus productos a tu estilo</h2>
+                        <p class="hero-descripcion">Dale vida a tus ideas con nuestros productos personalizados de alta calidad. Hoodies, camisetas, termos y más.</p>
+                        <div class="hero-botones">
+                            <button class="btn btn-primario" data-navegar="productos">Ver Productos</button>
+                            <button class="btn btn-secundario" data-navegar="personaliza">Cómo Funciona</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contenedor">
+                <section class="seccion-productos-destacados">
+                    <h3 class="titulo-seccion">Productos Destacados</h3>
+                    <div class="grid-productos" id="productosDestacados"></div>
+                </section>
+                
+                <section class="seccion-beneficios">
+                    <h3 class="titulo-seccion">¿Por qué elegirnos?</h3>
+                    <div class="grid-beneficios">
+                        <div class="beneficio-card">
+                            <div class="beneficio-icono">🎨</div>
+                            <h4>100% Personalizable</h4>
+                            <p>Diseña tus productos con colores, textos e imágenes únicas</p>
+                        </div>
+                        <div class="beneficio-card">
+                            <div class="beneficio-icono">⚡</div>
+                            <h4>Entrega Rápida</h4>
+                            <p>Recibe tus productos personalizados en tiempo récord</p>
+                        </div>
+                        <div class="beneficio-card">
+                            <div class="beneficio-icono">✨</div>
+                            <h4>Alta Calidad</h4>
+                            <p>Materiales premium y técnicas de impresión profesionales</p>
+                        </div>
+                        <div class="beneficio-card">
+                            <div class="beneficio-icono">💯</div>
+                            <h4>Garantía Total</h4>
+                            <p>Satisfacción garantizada en cada pedido</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="seccion-testimonios">
+                    <h3 class="titulo-seccion">Lo que dicen nuestros clientes</h3>
+                    <div class="grid-testimonios">
+                        <div class="testimonio-card">
+                            <div class="testimonio-estrellas">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonio-texto">"Pedí 50 camisetas personalizadas para mi empresa y quedaron espectaculares. La calidad de la impresión es excelente y el servicio fue muy profesional. ¡Totalmente recomendados!"</p>
+                            <div class="testimonio-autor">
+                                <div class="testimonio-avatar">MC</div>
+                                <div class="testimonio-info">
+                                    <strong>María Camila Rodríguez</strong>
+                                    <span>Directora de Marketing</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonio-card">
+                            <div class="testimonio-estrellas">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonio-texto">"Compré unos termos personalizados como regalo y fueron un éxito total. El diseño quedó tal cual lo imaginé y la entrega fue súper rápida. Definitivamente volveré a comprar."</p>
+                            <div class="testimonio-autor">
+                                <div class="testimonio-avatar">AS</div>
+                                <div class="testimonio-info">
+                                    <strong>Andrés Santana</strong>
+                                    <span>Emprendedor</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonio-card">
+                            <div class="testimonio-estrellas">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonio-texto">"El mejor servicio de personalización en Neiva. Hice hoodies para mi equipo de trabajo y todos quedaron encantados. La atención al cliente es excepcional y los precios muy justos."</p>
+                            <div class="testimonio-autor">
+                                <div class="testimonio-avatar">LP</div>
+                                <div class="testimonio-info">
+                                    <strong>Laura Pérez</strong>
+                                    <span>Coordinadora de Eventos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Vista: Personaliza -->
+        <section class="vista" id="vista-personaliza">
+            <div class="hero-personaliza">
+                <div class="contenedor">
+                    <h2 class="hero-titulo">Haz realidad tus ideas</h2>
+                    <p class="hero-descripcion">En Serviimpresiones Neiva, transformamos tu creatividad en productos únicos</p>
+                </div>
+            </div>
+            
+            <div class="contenedor">
+                <div class="contenido-personaliza">
+                    <div class="info-card">
+                        <div class="info-icono">🖌️</div>
+                        <h3>Diseño Personalizado</h3>
+                        <p>Elige entre una amplia gama de opciones de personalización. Agrega tu texto favorito, selecciona colores vibrantes y sube tus propias imágenes. Nuestro sistema intuitivo hace que personalizar sea fácil y divertido.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icono">🎯</div>
+                        <h3>Perfecto para Cualquier Ocasión</h3>
+                        <p>Ya sea para tu negocio, eventos especiales, regalos personalizados o simplemente para expresar tu estilo único, tenemos el producto perfecto para ti. Cada artículo es creado con atención al detalle.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icono">🚀</div>
+                        <h3>Proceso Simple y Rápido</h3>
+                        <p>1. Selecciona tu producto favorito<br>
+                           2. Personalízalo con tus opciones preferidas<br>
+                           3. Agrégalo al carrito y completa tu pedido<br>
+                           4. ¡Recibe tu producto único en poco tiempo!</p>
+                    </div>
+                </div>
+                
+                
+                <div class="cta-seccion">
+                    <h3>¿Listo para crear algo increíble?</h3>
+                    <button class="btn btn-primario btn-grande" data-navegar="productos">Explorar Productos</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="vista" id="vista-productos">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Nuestros Productos</h2>
+                <p class="subtitulo-seccion">Selecciona un producto para personalizarlo a tu gusto</p>
+                <div class="grid-productos" id="listaProductos"></div>
+            </div>
+        </section>
+
+        <!-- Vista: Detalle/Personalización de Producto -->
+        <section class="vista" id="vista-detalle-producto">
+            <div class="contenedor">
+                <button class="btn-volver" id="btnVolverProductos">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Volver a Productos
+                </button>
+                <div class="detalle-producto" id="detalleProducto"></div>
+            </div>
+        </section>
+
+        <!-- Vista: Contactanos -->
+        <section class="vista" id="vista-contactanos">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Contáctanos</h2>
+                <div class="contacto-grid">
+                    <div class="contacto-info">
+                        <h3>Información de Contacto</h3>
+                        <div class="info-item">
+                            <div class="info-item-icono">📧</div>
+                            <div>
+                                <strong>Email</strong>
+                                <p>contacto@serviimpresionesneiva.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-item-icono">📱</div>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <p>+57 318 456 7890</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-item-icono">📍</div>
+                            <div>
+                                <strong>Ubicación</strong>
+                                <p>Calle 7 # 5-24, Centro<br>Neiva, Huila - Colombia</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-item-icono">⏰</div>
+                            <div>
+                                <strong>Horario</strong>
+                                <p>Lunes a Viernes: 8:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-formulario">
+                        <form id="formContactoPrincipal" class="formulario-contacto">
+                            <div class="form-grupo">
+                                <label for="contactoNombre">Nombre</label>
+                                <input type="text" id="contactoNombre" name="nombre" placeholder="Francisco Andrade" required>
+                            </div>
+                            <div class="form-grupo-row">
+                                <div class="form-grupo">
+                                    <label for="contactoCorreo">Correo</label>
+                                    <input type="email" id="contactoCorreo" name="correo" required>
+                                </div>
+                                <div class="form-grupo">
+                                    <label for="contactoCelular">Número de celular</label>
+                                    <input type="tel" id="contactoCelular" name="celular" placeholder="+57" required>
+                                </div>
+                            </div>
+                            <div class="form-grupo">
+                                <label for="contactoMensaje">Mensaje</label>
+                                <textarea id="contactoMensaje" name="mensaje" rows="5" placeholder="Hola, me interesa..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primario btn-enviar">
+                                ENVIAR
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vista: Quienes Somos -->
+        <section class="vista" id="vista-quienes-somos">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Quiénes Somos</h2>
+                <div class="quienes-somos-contenido">
+                    <div class="quienes-somos-texto">
+                        <h3>Nuestra Historia</h3>
+                        <p>Serviimpresiones Neiva nace del amor por la creatividad y la necesidad de ofrecer productos personalizados de alta calidad en la región. Desde 2018, hemos ayudado a cientos de clientes a materializar sus ideas en productos únicos y memorables.</p>
+                        
+                        <p>Lo que comenzó como un pequeño emprendimiento familiar, hoy se ha convertido en la empresa líder de personalización de productos en Neiva. Contamos con tecnología de punta y un equipo apasionado por hacer realidad tus diseños.</p>
+                        
+                        <h3>Nuestra Misión</h3>
+                        <p>Transformar ideas en productos tangibles que expresen la identidad única de cada cliente, brindando calidad superior, servicio excepcional y precios justos.</p>
+                        
+                        <h3>Nuestros Valores</h3>
+                        <ul class="valores-lista">
+                            <li><strong>Calidad:</strong> Utilizamos solo los mejores materiales y técnicas de impresión</li>
+                            <li><strong>Creatividad:</strong> Impulsamos la expresión personal y la originalidad</li>
+                            <li><strong>Compromiso:</strong> Cumplimos nuestras promesas en tiempo y forma</li>
+                            <li><strong>Innovación:</strong> Incorporamos constantemente nuevas tecnologías y productos</li>
+                            <li><strong>Cercanía:</strong> Construimos relaciones duraderas con nuestros clientes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vista: Mis Compras -->
+        <section class="vista" id="vista-mis-compras">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Mis Compras</h2>
+                <p class="subtitulo-seccion">Historial de tus pedidos</p>
+                <div id="listaMisCompras"></div>
+            </div>
+        </section>
+
+        <!-- Vista: Detalle de Compra -->
+        <section class="vista" id="vista-detalle-compra">
+            <div class="contenedor">
+                <button class="btn-volver" onclick="volverAMisCompras()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Volver a Mis Compras
+                </button>
+                <div id="detalleCompraContenido"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Carrito -->
+    <div class="modal" id="modalCarrito">
+        <div class="modal-contenido modal-carrito">
+            <div class="modal-header">
+                <h3>Tu Carrito</h3>
+                <button class="modal-cerrar" id="cerrarModalCarrito">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="contenidoCarrito"></div>
+            </div>
+            <div class="modal-footer">
+                <div class="total-carrito">
+                    <span>Total:</span>
+                    <span class="total-precio" id="totalCarrito">$0</span>
+                </div>
+                <button class="btn btn-primario btn-block" id="btnFinalizarCompra">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Checkout -->
+    <div class="modal" id="modalCheckout">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h3>Finalizar Compra</h3>
+                <button class="modal-cerrar" id="cerrarModalCheckout">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="formCheckout" class="formulario">
+                    <div class="form-grupo">
+                        <label for="checkoutNombre">Nombre Completo *</label>
+                        <input type="text" id="checkoutNombre" name="nombre" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="checkoutEmail">Email *</label>
+                        <input type="email" id="checkoutEmail" name="email" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="checkoutTelefono">Teléfono *</label>
+                        <input type="tel" id="checkoutTelefono" name="telefono" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="checkoutDireccion">Dirección de Entrega *</label>
+                        <textarea id="checkoutDireccion" name="direccion" rows="3" required></textarea>
+                    </div>
+                    <div class="checkout-total">
+                        <strong>Total a Pagar:</strong>
+                        <span id="totalCheckout">$0</span>
+                    </div>
+                    <button type="submit" class="btn btn-primario btn-block">Confirmar Pedido</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmación -->
+    <div class="modal" id="modalConfirmacion">
+        <div class="modal-contenido modal-confirmacion">
+            <div class="confirmacion-icono">✓</div>
+            <h3>¡Pedido Confirmado!</h3>
+            <div class="confirmacion-mensaje">
+                <p>Tu pedido ha sido procesado exitosamente. Te contactaremos pronto para coordinar la entrega.</p>
+            </div>
+            <button class="btn btn-primario" id="cerrarModalConfirmacion">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div class="modal" id="modalLogin">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h3>Iniciar Sesión</h3>
+                <button class="modal-cerrar" onclick="cerrarModalLogin()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="formLogin" class="formulario">
+                    <div class="form-grupo">
+                        <label for="loginEmail">Email *</label>
+                        <input type="email" id="loginEmail" name="email" required placeholder="ejemplo@correo.com">
+                    </div>
+                    <div class="form-grupo">
+                        <label for="loginPassword">Contraseña *</label>
+                        <input type="password" id="loginPassword" name="password" required placeholder="Tu contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-primario btn-block">Iniciar Sesión</button>
+                </form>               
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="footer-grid">
+                <div class="footer-columna">
+                    <h4>Serviimpresiones Neiva</h4>
+                    <p>Tu tienda de confianza para productos personalizados en Neiva.</p>
+                </div>
+                
+                <div class="footer-columna">
+                    <h4>Contacto</h4>
+                    <ul class="footer-lista">
+                        <li>📧 contacto@serviimpresionesneiva.com</li>
+                        <li>📱 +57 318 456 7890</li>
+                        <li>📍 Calle 7 # 5-24, Neiva</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-columna">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-lista">
+                        <li><a href="#inicio" data-seccion="inicio">Inicio</a></li>
+                        <li><a href="#productos" data-seccion="productos">Productos</a></li>
+                        <li><a href="#personaliza" data-seccion="personaliza">Personaliza</a></li>
+                        <li><a href="#contactanos" data-seccion="contactanos">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-columna">
+                    <h4>Contáctanos</h4>
+                    <form id="formContactoFooter" class="formulario-footer">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="email" name="correo" placeholder="Correo" required>
+                        <input type="tel" name="celular" placeholder="Celular" required>
+                        <textarea name="mensaje" placeholder="Mensaje" rows="3" required></textarea>
+                        <button type="submit" class="btn btn-secundario">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Serviimpresiones Neiva. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
